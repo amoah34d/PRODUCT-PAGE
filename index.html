@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <img src="logo.jpg" alt="Logo">
+        <span>MyStore</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="products">
+    
+    <div class="product-card">
+      <img src="headphone.png" alt="Wireless Headphones">
+      <h1>Wireless Headphones</h1>
+      <p class="price">GH₵ 450.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="laptop.png" alt="HP ELITEBOOK">
+      <h1>HP ELITEBOOK</h1>
+      <p class="price">GH₵ 2,500</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="tablet.png" alt="tablet">
+      <h1>Tablet</h1>
+      <p class="price">GH₵ 1,550.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="gamepage.png" alt="gamepad">
+      <h1>PS4 gamepad</h1>
+      <p class="price">GH₵ 250.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="phone.png" alt="phones">
+      <h1>iPhones 15</h1>
+      <p class="price">GH₵ 7,000.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="selfiestick.png" alt="selfiestick">
+      <h1>Selfie Stick</h1>
+      <p class="price">GH₵ 150.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+
+    </div>
+
+    <div class="product-card">
+      <img src="mouse.png" alt="mouse">
+      <h1>wireless mouse</h1>
+      <p class="price">GH₵ 70.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+
+    </div>
+    <div class="product-card">
+      <img src="keyboard.png" alt="keyboard">
+      <h1>wireless Keyboard</h1>
+      <p class="price">GH₵ 100.00</p>
+      <input type="number" value="1" min="1">
+      <button>Add to Cart</button>
+
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <strong>MyStore</strong><br>
+        Quality tech products
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 MyStore. All rights reserved.
+    </div>
+  </footer>
+  <script>
+  // Select all product cards
+  const productCards = document.querySelectorAll('.product-card');
+
+  productCards.forEach(card => {
+    const button = card.querySelector('button');
+    const quantityInput = card.querySelector('input[type="number"]');
+
+    button.addEventListener('click', () => {
+      // Get product name
+      const productName = card.querySelector('h1').textContent;
+
+      // Get quantity, default to 1
+      const quantity = parseInt(quantityInput.value) || 1;
+
+      // Show alert
+      alert(`You have added ${quantity} × ${productName} to your cart!`);
+
+      // Reset quantity input to 1
+      quantityInput.value = 1;
+    });
+  });
+</script>
+
+</body>
+</html>
